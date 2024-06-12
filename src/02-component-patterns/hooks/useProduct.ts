@@ -29,6 +29,10 @@ export const useProduct = ({ onChange, product, value = 0, initialValues }: useP
         return initialValues?.maxCount === counter;
     }, [counter, initialValues]);
 
+    const reset = () => {
+        setCounter(initialValues?.count || value);
+    }
+
     useEffect(() => {
         if(!isMounted.current) return;
 
@@ -41,8 +45,9 @@ export const useProduct = ({ onChange, product, value = 0, initialValues }: useP
 
     return {
         counter,
+        isMaxCountReached: isMaxCountReached(),
         increaseBy,
-        isMaxCountReached: isMaxCountReached()
+        reset
     }
 
 }
