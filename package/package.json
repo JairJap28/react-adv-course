@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,6 +35,14 @@
   },
   "name": "jj-product-card",
   "author": "Jair Leonardo Jimenez Munevar",
+  "keywords": [
+    "product",
+    "card"
+  ],
+  "repository": {
+    "url": "https://github.com/JairJap28/react-adv-course/tree/pre-npm/package",
+    "type": "git"
+  },
   "module": "dist/jj-product-card.esm.js",
   "size-limit": [
     {
@@ -47,13 +55,20 @@
     }
   ],
   "devDependencies": {
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
     "@rollup/plugin-image": "^3.0.3",
     "@size-limit/preset-small-lib": "^11.1.4",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "babel-jest": "^29.7.0",
     "husky": "^9.0.11",
+    "jest": "^29.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-test-renderer": "^18.3.1",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^11.1.4",
     "tsdx": "^0.14.1",
@@ -61,6 +76,13 @@
     "typescript": "^3.9.10"
   },
   "dependencies": {
+    "@types/react-test-renderer": "^18.3.0",
     "postcss": "^8.4.38"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
